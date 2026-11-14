@@ -47,6 +47,8 @@ Selama proses, kamu cukup mengetes sebagai pengguna biasa. AI menjelaskan setiap
 
 ## 🔄 Alur Kerja
 
+Kalau belum terload flowchartnya, bisa refresh dlu sekali
+
 ```mermaid
 flowchart TD
     A[Kamu kirim prompt + brief] --> B[AI wawancara<br/>maks. 10 pertanyaan]
