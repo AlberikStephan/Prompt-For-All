@@ -16,7 +16,7 @@
 
 ## 👋 Selamat Datang
 
-Halo, selamat datang di **Prompt For All**.
+
 
 Repo ini kubuat untuk kamu yang ingin bikin website atau aplikasi, tapi bingung harus mulai dari mana. Belum paham stack, database, atau deployment? Tidak masalah. Kamu cukup punya ide, AI yang akan memandu sisanya.
 
