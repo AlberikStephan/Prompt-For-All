@@ -23,6 +23,7 @@ Repo ini kubuat untuk kamu yang ingin bikin website atau aplikasi, tapi bingung 
 ## 📑 Daftar Isi
 
 - [Masalah yang Diselesaikan](#-masalah-yang-diselesaikan)
+- [Alur Kerja](#-alur-kerja)
 - [Prasyarat](#-prasyarat)
 - [Cara Pakai](#-cara-pakai)
 - [Tips: Hemat Limit dan Context](#-tips-hemat-limit-dan-context)
@@ -34,7 +35,7 @@ Repo ini kubuat untuk kamu yang ingin bikin website atau aplikasi, tapi bingung 
 
 Belajar full stack itu berat: frontend, backend, database, deployment, keamanan. Pemula biasanya tersesat di tutorial yang terpisah-pisah dan tidak pernah sampai ke web yang benar-benar online.
 
-[`plan_for_app_project.md`](./plan_for_app_project.md) membuat AI berperan sebagai **agency web & app development**, dan kamu sebagai client-nya. Alurnya:
+[`plan_for_app_project.md`](./Prompt%20Collections/plan_for_app_project.md) membuat AI berperan sebagai **agency web & app development**, dan kamu sebagai client-nya. Alurnya:
 
 | Tahap | Yang terjadi |
 | --- | --- |
@@ -43,6 +44,32 @@ Belajar full stack itu berat: frontend, backend, database, deployment, keamanan.
 | 3. Pengerjaan | Planning → Frontend → Backend → Database → Deployment, satu per satu, sampai webmu online. |
 
 Selama proses, kamu cukup mengetes sebagai pengguna biasa. AI menjelaskan setiap langkah dengan bahasa awam, minta izin sebelum ada biaya atau penghapusan data, dan menjaga keamanan tanpa perlu kamu minta.
+
+## 🔄 Alur Kerja
+
+```mermaid
+flowchart TD
+    A[Kamu kirim prompt + brief] --> B[AI wawancara<br/>maks. 10 pertanyaan]
+    B --> C[AI tulis ringkasan]
+    C -->|kamu setuju| D[AI buat PLAN.md]
+    C -->|ada yang salah| B
+    D --> E[Kerjakan satu bagian<br/>Frontend / Backend / Database / Deploy]
+    E --> F[AI lapor: apa yang jadi,<br/>cara tes, langkah berikutnya]
+    F -->|kamu tes, bilang 'lanjut'| E
+    F -->|semua bagian selesai| G[🎉 Web online]
+```
+
+**Yang kamu lihat sebagai user:**
+
+| Saat | Di layarmu |
+| --- | --- |
+| Wawancara | Satu pertanyaan per pesan, plus rekomendasi AI. Bingung? Jawab "ikut rekomendasi". |
+| Rencana | File `PLAN.md` muncul di folder project. Ini peta project-mu. |
+| Pengerjaan | Tiap selesai satu tugas, AI kasih link/halaman untuk kamu klik dan cek. |
+| Butuh aksimu | Langkah bernomor, misalnya buat akun atau salin API key, lengkap dengan tanda kalau sudah berhasil. |
+| Ada biaya / hapus data | AI berhenti dan minta izinmu dulu. |
+
+Teknisnya, semua kode, konfigurasi, dan file ditulis AI langsung di folder project. `PLAN.md` jadi "ingatan" AI: setiap sesi baru, AI membacanya dulu lalu lanjut dari posisi terakhir.
 
 ## 🧰 Prasyarat
 
@@ -56,7 +83,7 @@ Selama proses, kamu cukup mengetes sebagai pengguna biasa. AI menjelaskan setiap
 ## 🚀 Cara Pakai
 
 1. Buat folder project kosong, lalu buka AI di folder itu.
-2. Buka [`plan_for_app_project.md`](./plan_for_app_project.md) dan salin isi kotak **Prompt**.
+2. Buka [`plan_for_app_project.md`](./Prompt%20Collections/plan_for_app_project.md) dan salin isi kotak **Prompt**.
 3. Isi bagian **Brief** yang bertanda `[seperti ini]`. Tidak tahu jawabannya? Tulis `[belum tahu]`, AI akan menanyakannya.
 4. Kirim, lalu jawab pertanyaan AI satu per satu.
 5. Di sesi berikutnya, cukup tulis: *"Baca PLAN.md, lalu lanjutkan dari posisi terakhir."*
@@ -84,7 +111,7 @@ Aturan 300K  +  Caveman  +  Prompt dari Ansa  =  bangun web dalam 1x Session !
 
 - **Aturan 300K** menjaga sesi tetap ringan dan fokus.
 - **[Caveman](https://github.com/JuliusBrussee/caveman)** membuat jawaban AI ringkas, sehingga token lebih hemat.
-- **Prompt dari Ansa** ([`plan_for_app_project.md`](./plan_for_app_project.md)) memberi AI alur kerja yang jelas dari awal sampai online.
+- **Prompt dari Ansa** ([`plan_for_app_project.md`](./Prompt%20Collections/plan_for_app_project.md)) memberi AI alur kerja yang jelas dari awal sampai online.
 
 ## 🌱 Project yang Terus Tumbuh
 
